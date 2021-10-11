@@ -89,3 +89,9 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+int sys_square(void) {
+	int num;
+	argptr(0, (void *)&num, sizeof(num));
+	return num*num;
+}
